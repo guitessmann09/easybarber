@@ -1,10 +1,10 @@
-import { ModeToggle } from './_components/mode-toggle';
+import Header from './_components/header';
 
 export default function Home() {
   return (
-    <div>
-      <ModeToggle />
-      <h1>EasyBarber</h1>
+    <div className="h-full">
+      <Header />
+      
     </div>
   );
 }
