@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import { Roboto } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from './_components/theme-provider';
 
-const roboto = Roboto({
+const inter = Inter({
   weight: '400',
   subsets: ['latin'],
 });
@@ -18,8 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className='h-screen'>
-      <body className={`${roboto.className} h-screen antialiased mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}>
+    <html lang="en" className="h-screen">
+      <body
+        className={`${inter.className}`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
