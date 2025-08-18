@@ -1,7 +1,11 @@
 'use client';
 
+import Image from 'next/image';
 import Header from './_components/header';
 import SplitText from './_components/TextAnimations/SplitText/SplitText';
+import { Button } from './_components/ui/button';
+import Link from 'next/link';
+import { ChevronRight } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -15,7 +19,7 @@ export default function Home() {
             O sistema de gestão completo para sua
             <SplitText
               text="barbearia decolar 🚀"
-              className="text-center text-6xl font-semibold"
+              className="ml-4 text-center text-6xl font-semibold"
               delay={250}
               duration={2}
               ease="elastic.out(1, 0.3)"
@@ -31,6 +35,23 @@ export default function Home() {
             Centralize agendamentos, finanças e clientes em um único sistema
             intuitivo.
           </p>
+          <Button
+            asChild
+            className="p-5 transition-all duration-500 ease-out hover:p-6"
+          >
+            <Link href={' '}>
+              Saiba mais
+              <ChevronRight />
+            </Link>
+          </Button>
+        </div>
+        <div className="relative h-135 w-120">
+          <Image
+            src="/iPhone-14-Plus-dandys-den.vercel.app.png"
+            alt="Phone Preview"
+            fill
+            className="object-cover"
+          />
         </div>
       </div>
     </div>
