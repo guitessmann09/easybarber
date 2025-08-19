@@ -1,5 +1,8 @@
 import { Card } from './ui/card';
 import { functionalities } from '../_constants/functionalities';
+import { Button } from './ui/button';
+import { HoverCard, HoverCardContent, HoverCardTrigger } from './ui/hover-card';
+import Image from 'next/image';
 
 const FunctionalityCard = () => {
   return functionalities.map(functionality => {
@@ -11,7 +14,25 @@ const FunctionalityCard = () => {
           </div>
         </div>
         <h3 className="text-foreground text-xl font-semibold">
-          {functionality.title}
+          <HoverCard>
+            <HoverCardTrigger asChild>
+              <Button
+                variant="ghost"
+                className="cursor-pointer hover:underline"
+              >
+                {functionality.title}
+              </Button>
+            </HoverCardTrigger>
+            <HoverCardContent className="flex w-lg items-center justify-center">
+              <Image
+                src={functionality.gif}
+                alt="Agenda"
+                height={450}
+                width={450}
+                className="rounded-lg"
+              />
+            </HoverCardContent>
+          </HoverCard>
         </h3>
         <p className="text-muted-foreground leading-relaxed">
           {functionality.description}

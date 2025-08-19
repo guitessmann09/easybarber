@@ -12,6 +12,7 @@ export const functionalities = [
     title: 'Agendamento Inteligente',
     description:
       'Sistema completo de agendamentos com geração automático de comandas.',
+    gif: '/agenda.gif',
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ export const functionalities = [
     title: 'Controle de Agenda',
     description:
       'Visualize e gerencie todos os compromissos em uma interface moderna e intuitiva.',
+    gif: '/caixa.gif',
   },
   {
     id: 3,
@@ -26,6 +28,7 @@ export const functionalities = [
     title: 'Gestão de funcionários',
     description:
       'Gerencie a equipe com facilidade, controle de horários e produtividade.',
+    gif: '/agenda.gif',
   },
   {
     id: 4,
@@ -33,5 +36,6 @@ export const functionalities = [
     title: 'Gestão de estoque',
     description:
       'Controle de estoque de produtos e insumos, evitando desperdícios e garantindo a reposição.',
+    gif: '/agenda.gif',
   },
 ];
